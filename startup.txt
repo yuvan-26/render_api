@@ -1,0 +1,3 @@
+gunicorn --bind=0.0.0.0 --timeout 600 test_graph:app
+gunicorn --bind=0.0.0.0 --timeout 600 visualisation_final:app
+gunicorn --bind=0.0.0.0 --timeout 600 peter_test:app
