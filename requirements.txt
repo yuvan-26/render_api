@@ -4,3 +4,4 @@ pandas
 plotly
 mysql-connector-python
 numpy
+gunicorn
