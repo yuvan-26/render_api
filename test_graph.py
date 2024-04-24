@@ -72,7 +72,7 @@ def get_native_data():
     
     # Read data from CSV file
     data = []
-    with open(file_path, 'r', encoding='latin-1') as file:
+    with open(csv_file_path, 'r', encoding='latin-1') as file:
         reader = csv.DictReader(file)
         for row in reader:
             data.append(row)
