@@ -4,6 +4,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import mysql.connector
 import plotly.express as px
+import csv
 
 # Create a Flask app
 app = Flask(__name__)
