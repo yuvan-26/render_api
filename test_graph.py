@@ -47,6 +47,38 @@ def fetch_data():
 
     return df
 
+# Define the route for accessing the first CSV data
+@app.route('/all_data', methods=['GET'])
+def get_all_data():
+    # Path to your CSV file
+    csv_file_path = 'other.csv'
+    
+    # Read data from CSV file
+    data = []
+    with open(csv_file_path, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            data.append(row)
+    
+    # Convert data to JSON and return
+    return jsonify(data)
+
+# Define the route for accessing the second CSV data
+@app.route('/native_data', methods=['GET'])
+def get_native_data():
+    # Path to your CSV file
+    csv_file_path = 'Native_data.csv'
+    
+    # Read data from CSV file
+    data = []
+    with open(csv_file_path, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            data.append(row)
+    
+    # Convert data to JSON and return
+    return jsonify(data)
+
 @app.route('/heat_plot_chart', methods=['GET'])
 def heat_plot_chart():
     df = fetch_data()
