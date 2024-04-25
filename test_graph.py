@@ -56,7 +56,7 @@ def get_all_data():
     
     # Read data from CSV file
     data = []
-    with open(csv_file_path, 'r') as file:
+    with open(csv_file_path, 'r', encoding='latin-1') as file:
         reader = csv.DictReader(file)
         for row in reader:
             data.append(row)
